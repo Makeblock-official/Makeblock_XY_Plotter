@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:paddingTop="4dp">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:background="#c4d7ff" android:layout_gravity="center_horizontal"
+            android:padding="2dp"
+            android:layout_margin="2dp">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/button_left"
+                android:src="@drawable/example"
+                android:layout_gravity="center_horizontal" android:contentDescription="@string/example"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter" android:background="#00ffffff"/>
+    </FrameLayout>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+            android:layout_weight="1" android:background="#c4d7ff" android:padding="2dp"
+            android:layout_margin="2dp">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/button_middle" android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:src="@drawable/example" android:scaleType="fitCenter" android:contentDescription="@string/example"
+                android:background="#00ffffff"/>
+    </FrameLayout>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_weight="1"
+            android:background="#c4d7ff"
+            android:layout_gravity="center_horizontal" android:padding="2dp"
+            android:layout_margin="2dp">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/button_right" android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:src="@drawable/example" android:scaleType="fitCenter" android:contentDescription="@string/example"
+                android:background="#00ffffff"/>
+    </FrameLayout>
+</LinearLayout>

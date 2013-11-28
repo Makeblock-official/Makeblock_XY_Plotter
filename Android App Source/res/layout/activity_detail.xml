@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:background="#ffffff">
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_weight="3">
+    </FrameLayout>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_weight="1" android:layout_gravity="center_horizontal">
+        <com.makeblock.xystage.views.DrawImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:id="@+id/imageSource" android:layout_gravity="center" android:src="@drawable/example"
+                android:scaleType="fitXY"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/targetView" android:src="@drawable/target" android:scaleType="matrix"/>
+    </RelativeLayout>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" android:layout_weight="3">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+Speed"
+                android:id="@+id/add_speed" android:layout_gravity="right|center_vertical"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Speed"
+                android:id="@+id/reduce_speed" android:layout_gravity="left|center_vertical"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time 00:00"
+                android:id="@+id/timeView" android:layout_gravity="center_horizontal|bottom" android:textColor="#000000"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed:10"
+                android:id="@+id/speedView" android:layout_gravity="center_horizontal|top"
+                android:textColor="#000000"/>
+    </FrameLayout>
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset"
+                    android:id="@+id/reset_button" android:layout_gravity="right|center_vertical"
+                    android:layout_margin="10dp"/>
+            <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:text="High Precision"
+                    android:id="@+id/checkBox" android:checked="true"/>
+            <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start"
+                    android:id="@+id/start_button"
+                    android:layout_margin="10dp"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
