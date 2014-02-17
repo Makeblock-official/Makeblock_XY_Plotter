@@ -2,8 +2,8 @@
 * File Name          : Plotter.ino
 * Author             : Evan
 * Updated            : Ander
-* Version            : V0.1.0
-* Date               : 10/10/2013
+* Version            : V0.1.2
+* Date               : 02/15/2014
 * Description        : Data transmission format (7 byte):
                        =======================================
                         [6]   [5]   [4]   [3]   [2]   [1]   [0]
@@ -12,19 +12,19 @@
                        End:0xFD for Data,0xFC for Reset
                        =======================================
 * License            : CC-BY-SA 3.0
-* Copyright (C) 2011-2013 Hulu Robot Technology Co., Ltd. All right reserved.
+* Copyright (C) 2011-2014 Maker works Technology Co., Ltd. All right reserved.
 * http://www.makeblock.cc/
 **************************************************************************/
 
 #include <AccelStepper.h>
 #include <SoftwareSerial.h>
-#include <Me_BaseShield.h>
-#include <Me_Bluetooth.h>
+#include <Makeblock.h>
+#include <Wire.h>
 
 // Define a stepper and the pins it will use
 AccelStepper stepperX(AccelStepper::DRIVER, 13, 12); // 13-PUL, 12-DIR PORT 3
 AccelStepper stepperY(AccelStepper::DRIVER, 2, 8); // 2-PUL, 8-DIR, PORT 4
-Me_Bluetooth bluetooth(PORT_6);
+MeBluetooth bluetooth(PORT_6);
 int motorDrc = 4; //M1
 int motorPwm = 5; //M1
 int limitSW_X = A0; //PORT 7
